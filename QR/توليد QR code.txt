@@ -1,0 +1,27 @@
+from PIL import Image
+import PIL
+import qrcode
+pathes=[
+'https://drive.google.com/file/d/1gYPel6Gpd2GamK1oC0jHj37dBcT8ctOi/preview',
+'https://drive.google.com/file/d/1oGlkVNl26K_SOXoElZz7_Rc8JGzaBxZ7/preview',
+'https://drive.google.com/file/d/1I9WX7R8hTnnOnnHoN_1BUicMcCWphBoB/preview',
+'https://drive.google.com/file/d/1cGYBaJ4uirg-01MLifiyIUEW_62JmhFL/preview',
+'https://drive.google.com/file/d/1_7HE5fIclGOloZjD_OoA0bCuPrXnYGSR/preview',
+'https://drive.google.com/file/d/1MSvOIS5EC7TbgQRcjh-jFT6kt0rtbEA0/preview',
+'https://drive.google.com/file/d/1LSBhcOuO-e9kBoazqqZ0_ZS0tbFhVMnk/preview',
+'https://drive.google.com/file/d/1o3zO4BaNhnnl-0kSKrZSt4EVWApZDYYR/preview',
+'https://drive.google.com/file/d/12y843L8ey2eCFaVWmlbKPSIhlMMZyYp1/preview',
+'https://drive.google.com/uc?export=download&id=1h3SmFHIV2PydhT3ctAGJ5WXwhXPXNAzu',
+'https://drive.google.com/uc?export=download&id=1-ndiPuuFHRNrItXVkeEWX3D0g1_RsVQn',
+'https://drive.google.com/uc?export=download&id=1Fuh8w27uaD_98RBaaQ9sg8bvOe1d4tk9',
+'https://drive.google.com/uc?export=download&id=1KZMwxnUtrf67lsprMNE7ySjyqLCgHtDG',
+'https://drive.google.com/uc?export=download&id=18DAQ_PcrJGknAekmXDZCkRkmlWlOSjLC',
+'https://drive.google.com/uc?export=download&id=1kZoyw2oMVtDmFgl-ufK4vcZZuMYe9GFQ'
+]
+for x in range(len(pathes)):
+    qr = qrcode.QRCode()
+    qr.add_data(pathes[x])
+    qr.make()
+    img = qr.make_image()
+    im1 = img.save(r"C:\Users\S.C.C\Desktop\QR\{}.png".format(x))
+    

@@ -1,0 +1,8 @@
+Django==3.2.11
+nltk==3.6.5
+SpeechRecognition==3.8.1
+opencv-python==4.5.4.60
+qrcode==7.3.1
+pillow==8.4.0
+gunicorn==20.1.0
+numpy==1.21.4
